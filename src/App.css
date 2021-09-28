@@ -1,0 +1,235 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #426696;
+  font-weight: 600;
+  font-size: 3rem;
+  opacity: 0.8;
+}
+h2,
+p {
+  color: #658ec6;
+  font-weight: 500;
+  opacity: 0.8;
+}
+h3 {
+  color: #426696;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.App {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  /* background: url("../src/pictures/vector.jpg"); */
+  background-color: rgba(32, 29, 216, 0.3);
+  /* background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9)); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  display: flex;
+  margin: 2rem 0rem;
+  padding: 1rem 5rem;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.link h2 {
+  padding: 0rem 2rem;
+}
+
+.glass {
+  background: white;
+  min-height: 80vh;
+  width: 60%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 0.5rem;
+  z-index: 3;
+  backdrop-filter: blur(0.8rem);
+  display: flex;
+}
+
+.dashboard {
+  flex: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 0.5rem;
+  width: 250px;
+}
+
+.games {
+  flex: 2;
+  margin: auto;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  /* background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  ); */
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  height: 200px;
+  border-radius: 5px;
+  padding-bottom: 10px;
+}
+
+.action_buttons {
+  align-items: flex-end;
+  /* visibility: hidden; */
+}
+
+.status input {
+  border: 0ch;
+  outline: none;
+  width: 100%;
+  padding: 0.5rem;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.games {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.cards {
+  overflow: auto;
+  height: 400px;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
+
+.card {
+  display: flex;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  border-radius: 0.5rem;
+  margin: 2rem 0rem;
+  padding: 1rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  justify-content: space-between;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.date {
+  font-weight: bold;
+  background: linear-gradient(to left top, #65dfc9, #46abbb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  /* border: none; */
+  /* width: 50%; */
+  color: black;
+  font-weight: 600;
+  margin-left: 25px;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border-color: #426696;
+}
+.input {
+  display: flex;
+}
+
+/* Animation */
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  h1 {
+    font-size: 25px;
+  }
+  .glass {
+    flex-direction: column;
+    height: 70vh;
+    width: 80%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .dashboard .user img {
+    height: 40px;
+  }
+  .dashboard {
+    height: 200px;
+    flex: 1;
+    flex-direction: row;
+    width: auto;
+  }
+  .link img {
+    height: 25px;
+  }
+  .link h2 {
+    display: none;
+  }
+  .cards {
+    height: 50vh;
+  }
+  .user,
+  .links {
+    flex: 1;
+  }
+  .games {
+    flex: 0;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50vh;
+  }
+}

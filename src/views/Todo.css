@@ -1,0 +1,88 @@
+.card {
+  display: flex;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  border-radius: 0.5rem;
+  margin: 2rem 0rem;
+  padding: 1rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  justify-content: space-between;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttons {
+  padding-top: 5px;
+  flex: 2;
+  /* align-self: flex-end; */
+}
+h3 {
+  /* flex: 1; */
+  margin-left: 10px;
+}
+.button_delete {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  /* position: absolute; */
+  /* right: 20; */
+  /* margin-left: 20px; */
+  color: black;
+  font-weight: 600;
+  /* margin-left: 25px; */
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border-color: #426696;
+  cursor: pointer;
+}
+
+.button_edit {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  color: black;
+  font-weight: 600;
+  /* margin-left: 25px; */
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border-color: #426696;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.date {
+  font-weight: bold;
+  background: linear-gradient(to left top, #65dfc9, #46abbb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+input {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border: none;
+  /* width: 50%; */
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .date {
+    font-size: 10px;
+  }
+}
