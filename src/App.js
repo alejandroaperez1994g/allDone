@@ -20,17 +20,19 @@ function App() {
   const useStyles = makeStyles((theme) => ({
     container: {
       display: "flex",
-
+      alignItems: "center",
       borderColor: "text.primary",
       paddingTop: "10px",
       marginLeft: "-15px",
+      position: "relative",
     },
-    // iconAdd: {
-    //   display: "none",
-    //   [theme.breakpoints.down("lg")]: {
-    //     display: "none",
-    //   },
-    // },
+    container2: {
+      display: "flex",
+      alignItems: "center",
+      // position: "absolute",
+      // right: "10px",
+      // right: -750,
+    },
     item: {
       display: "flex",
       border: theme.spacing(1),
@@ -38,22 +40,21 @@ function App() {
       border: "1px solid #000",
       borderRadius: "5px",
       padding: "5px",
-      [theme.breakpoints.down("sm")]: {
+      marginRight: 3,
+      [theme.breakpoints.down("md")]: {
         text: {
           display: "none",
         },
       },
     },
     itemCancel: {
-      [theme.breakpoints.down("md")]: {
-        display: "flex",
-        border: theme.spacing(1),
-        cursor: "Pointer",
-        // border: "1px solid #000",
-        borderRadius: "5px",
-        padding: "5px",
-      },
-      [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      border: theme.spacing(1),
+      cursor: "Pointer",
+      // border: "1px solid #000",
+      borderRadius: "5px",
+      padding: "5px",
+      [theme.breakpoints.down("lg")]: {
         itemCancel: {
           display: "none",
           border: "0px",
@@ -80,7 +81,7 @@ function App() {
     },
     text: {
       marginLeft: theme.spacing(1),
-      [theme.breakpoints.down("sm")]: {
+      [theme.breakpoints.down("md")]: {
         display: "none",
       },
     },
@@ -93,11 +94,6 @@ function App() {
     db.collection("todos")
       .orderBy("timestamp", "desc")
       .onSnapshot((snapshot) => {
-        // console.log(
-        //   snapshot.docs.map((doc) => ({
-        //     todo: doc.data().timestamp,
-        //   }))
-        // );
         setTodos(
           snapshot.docs.map((doc) => ({
             id: doc.id,
@@ -154,13 +150,15 @@ function App() {
                   <CircleOutlinedIcon className={classes.icon} />
                   <Typography className={classes.text}>Estimation</Typography>
                 </div>
-                <div className={classes.itemCancel}>
-                  <Typography className={classes.text}>Cancel</Typography>
-                </div>
-                <div className={classes.itemAdd} onClick={addTodo}>
-                  <AddIcon className={classes.iconAdd} />
-                  <Typography className={classes.textAdd}>Add</Typography>
-                </div>
+                <Container className={classes.container2}>
+                  <div className={classes.itemCancel}>
+                    <Typography className={classes.text}>Cancel</Typography>
+                  </div>
+                  <div className={classes.itemAdd} onClick={addTodo}>
+                    <AddIcon className={classes.iconAdd} />
+                    <Typography className={classes.textAdd}>Add</Typography>
+                  </div>
+                </Container>
               </Container>
             </form>
           </div>

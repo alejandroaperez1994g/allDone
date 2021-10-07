@@ -9,15 +9,32 @@
   margin: 2rem 0rem;
   padding: 1rem;
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  justify-content: flex-start;
+  position: relative;
 }
 
 .card-info {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
+
+.card-info h4 {
+  margin-left: 3px;
+}
+.date {
+  font-weight: bold;
+  background: linear-gradient(to left top, #65dfc9, #46abbb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  right: 20px;
+}
+
 .buttons {
   padding-top: 5px;
   flex: 2;
@@ -26,47 +43,6 @@
 h3 {
   /* flex: 1; */
   margin-left: 10px;
-}
-.button_delete {
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.3)
-  );
-  /* position: absolute; */
-  /* right: 20; */
-  /* margin-left: 20px; */
-  color: black;
-  font-weight: 600;
-  /* margin-left: 25px; */
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  border-color: #426696;
-  cursor: pointer;
-}
-
-.button_edit {
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.3)
-  );
-  color: black;
-  font-weight: 600;
-  /* margin-left: 25px; */
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  border-color: #426696;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-.date {
-  font-weight: bold;
-  background: linear-gradient(to left top, #65dfc9, #46abbb);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 input {
@@ -81,8 +57,8 @@ input {
   border-radius: 0.5rem;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1470px) {
   .date {
-    font-size: 10px;
+    display: none;
   }
 }
