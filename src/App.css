@@ -5,23 +5,8 @@
 }
 
 h1 {
-  color: #426696;
-  font-weight: 600;
-  font-size: 3rem;
-  opacity: 0.8;
+  font-size: 55px;
 }
-h2,
-p {
-  color: #658ec6;
-  font-weight: 500;
-  opacity: 0.8;
-}
-h3 {
-  color: #426696;
-  font-weight: 600;
-  opacity: 0.8;
-}
-
 .App {
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
@@ -31,21 +16,6 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.link {
-  display: flex;
-  margin: 2rem 0rem;
-  padding: 1rem 5rem;
-  align-items: center;
-}
-
-.avatar {
-  border-radius: 50%;
-}
-
-.link h2 {
-  padding: 0rem 2rem;
 }
 
 .glass {
@@ -63,22 +33,6 @@ h3 {
   display: flex;
 }
 
-.dashboard {
-  flex: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  text-align: center;
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.9),
-    rgba(255, 255, 255, 0.3)
-  );
-  border-radius: 0.5rem;
-  width: 250px;
-}
-
 .games {
   flex: 2;
   margin: auto;
@@ -88,6 +42,7 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   margin-bottom: 1rem;
   /* background: linear-gradient(
     to right bottom,
@@ -176,23 +131,7 @@ h3 {
   display: flex;
 }
 
-/* Animation */
-
-@keyframes animate {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-    border-radius: 0;
-  }
-
-  100% {
-    transform: translateY(-1000px) rotate(720deg);
-    opacity: 0;
-    border-radius: 50%;
-  }
-}
-
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1170px) {
   h1 {
     font-size: 25px;
   }
