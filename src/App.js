@@ -109,10 +109,6 @@ function App() {
     setShowButtons("false");
   };
 
-  const onClick = () => {
-    classes.container = classes.containerFocus;
-  };
-
   return (
     <div className="App">
       <section className="glass">
