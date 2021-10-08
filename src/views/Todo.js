@@ -1,8 +1,6 @@
-import React, { useState } from "react";
 import "../views/Todo.css";
 import db from "../firebase";
 import { makeStyles } from "@material-ui/core/styles";
-import DeleteIcon from "@mui/icons-material/Delete";
 import Chip from "@mui/material/Chip";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import LinkIcon from "@mui/icons-material/Link";
@@ -10,32 +8,7 @@ import TagIcon from "@mui/icons-material/Tag";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import Checkbox from "@mui/material/Checkbox";
 
-const useStyles = makeStyles((theme) => ({
-  modal: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  paper: {
-    alignItems: "center",
-    justifyContent: "center",
-    height: "15%",
-    width: "75%",
-    margin: "auto",
-    display: "flex",
-    flexDirection: "column",
-    background: "black",
-    opacity: 0.7,
-    borderRadius: 10,
-  },
-}));
-
 function Todo(props) {
-  const classes = useStyles();
-  const [open, setOpen] = useState(false);
-  const [input, setInput] = useState("");
-  const [todo, setTodo] = useState([]);
-
   let regExEmail =
     /(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
   let regExUrl =
@@ -51,7 +24,7 @@ function Todo(props) {
           size="small"
           variant="filled"
           icon={<TagIcon />}
-          sx={{ marginRight: 0.2 }}
+          sx={{ marginRight: 0.2, cursor: "pointer" }}
         />
       );
     } else if (todo.match(regExEmail)) {
@@ -63,7 +36,7 @@ function Todo(props) {
           size="small"
           variant="filled"
           icon={<MailOutlineIcon />}
-          sx={{ marginRight: 0.2 }}
+          sx={{ marginRight: 0.2, cursor: "pointer" }}
         />
       );
     } else if (todo.includes("@")) {
@@ -75,7 +48,7 @@ function Todo(props) {
           size="small"
           variant="filled"
           icon={<AlternateEmailIcon />}
-          sx={{ marginRight: 0.2 }}
+          sx={{ marginRight: 0.2, cursor: "pointer" }}
         />
       );
     } else if (todo.match(regExUrl)) {
@@ -87,7 +60,7 @@ function Todo(props) {
           size="small"
           variant="filled"
           icon={<LinkIcon />}
-          sx={{ marginRight: 0.2 }}
+          sx={{ marginRight: 0.2, cursor: "pointer" }}
         />
       );
     } else {
