@@ -29,9 +29,6 @@ function App() {
     container2: {
       display: "flex",
       alignItems: "center",
-      // position: "absolute",
-      // right: "10px",
-      // right: -750,
     },
     item: {
       display: "flex",
@@ -51,7 +48,7 @@ function App() {
       display: "flex",
       border: theme.spacing(1),
       cursor: "Pointer",
-      // border: "1px solid #000",
+
       borderRadius: "5px",
       padding: "5px",
       [theme.breakpoints.down("lg")]: {
@@ -62,14 +59,12 @@ function App() {
       },
     },
     itemAdd: {
-      // [theme.breakpoints.down("md")]: {
       display: "flex",
       border: theme.spacing(1),
       cursor: "Pointer",
       border: "1px solid #000",
       borderRadius: "5px",
       padding: "5px",
-      // },
     },
     icon: {
       marginRigth: theme.spacing(2),
@@ -114,7 +109,9 @@ function App() {
     setShowButtons("false");
   };
 
-  const onClick = () => setShowButtons(true);
+  const onClick = () => {
+    classes.container = classes.containerFocus;
+  };
 
   return (
     <div className="App">
@@ -127,7 +124,6 @@ function App() {
                 type="text"
                 value={input}
                 onChange={(event) => setInput(event.target.value)}
-                onClick={onClick}
               />
               <Container className={classes.container}>
                 <div className={classes.item}>

@@ -6,6 +6,10 @@
 
 h1 {
   font-size: 55px;
+  /* align-self: center; */
+  padding: 10px;
+  cursor: pointer;
+  width: fit-content;
 }
 .App {
   font-family: "Poppins", sans-serif;
